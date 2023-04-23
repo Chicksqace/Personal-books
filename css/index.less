@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    font-family: 'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@vw: 4.14vw;
+@color: #fb7299;
+
+// 导航栏
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: (46 / @vw);
+    line-height: (46 / @vw);
+    border-bottom: (1 / @vw) solid #ddd;
+    padding: 0 (20 / @vw);
+    font-size: (16 / @vw);
+
+    .logo {
+        margin: auto 0;
+        width: (26 / @vw);
+        height: (26 / @vw);
+        background-image: url(../images/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        a {
+            display: block;
+        }
+    }
+
+    .classification {
+        flex: 1;
+        margin-left: (35 / @vw);
+
+        a {
+            color: #6c727e;
+            margin-right: (15 / @vw);
+        }
+    }
+
+    button {
+        border: 0;
+        background-color: @color;
+        height: (30 / @vw);
+        line-height: (30 / @vw);
+        padding: 0 (16 / @vw);
+        border-radius: (30 / 2 / @vw);
+        color: #fff;
+        margin-top: (8 / @vw);
+    }
+}
+
+// 分类搜索
+.classification {
+    padding: 0 (10 / @vw);
+    padding-top: (10 / @vw);
+    .label {
+        margin: auto;
+        width: (382 / @vw);
+        height: (105 / @vw);
+        border-bottom: 1px solid #ddd;
+        .classify-label {
+            display: inline-block;
+            height: (32 / @vw);
+            line-height: (32 / @vw);
+            padding: 0 (10 / @vw);
+            text-align: center;
+            font-size: (12 / @vw);
+            color: #6c727e;
+        }
+    }
+
+    .label-row {
+        height: (38 / @vw);
+        line-height: (38 / @vw);
+        // background-color: @color;
+        color: #6c727e;
+        padding-left: (15 / @vw);
+        .screening {
+            display: inline-block;
+            .first-label {
+                display: inline-block;
+                margin-left: (10 / @vw);
+            }
+        }
+
+        .switch-btn {
+            float: right;
+            width: (40 / @vw);
+            position: relative;
+            .icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+                width: (12 / @vw);
+                height: (12 / @vw);
+                background-image: url(../images/下载.svg);
+                background-repeat: no-repeat;
+            }
+            span {
+                margin-left: (15 / @vw);
+            }
+        }
+    }
+}
+
+// 主体
+.main {
+    padding: 0 (8 / @vw);
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 (8 / @vw);
+    }
+    .mange {
+        width: 33.33%;
+        height: (215 / @vw);
+        padding: (8 / @vw);
+        .manga-cover {
+            width: 100%;
+            padding-top: 133%;
+            background-image: url(../images/2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+        }
+        .manga-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: (6 / @vw);
+            color: #222;
+            font-size: (16 / @vw);
+        }
+        .manga-info {
+            font-size: (12 / @vw);
+            color: #999;
+        }
+    }
+}
+
+// APP 打开
+.dis {
+    position: fixed;
+    bottom: -(48 / @vw);
+    left: 0;
+    width: 100%;
+    height: (48 / @vw);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s;
+    i {
+        position: absolute;
+        left: (30 / @vw);
+        top: 50%;
+        transform: translateY(-50%);
+        width: (20 / @vw);
+        height: (20 / @vw);
+        background-image: url(../images/X.svg);
+        background-repeat: no-repeat;
+    }
+    .v-logo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;
+        left: (60 / @vw);
+        width: (38 / @vw);
+        height: (38 / @vw);
+        background-image: url(../images/logo.png);
+        background-size: contain;
+    }
+    .text {
+        position: absolute;
+        left: (110 / @vw);
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        line-height: (18 / @vw);
+    }
+    .btn {
+        position: absolute;
+        right: (20 / @vw);
+        top: 50%;
+        transform: translateY(-50%);
+        width: (110 / @vw);
+        height: (31 / @vw);
+        line-height: (31 / @vw);
+        border-radius: (31 / @vw);
+        text-align: center;
+        font-size: (12 / @vw);
+        color: #fff;
+        background-color: @color;
+    }
+}
+
+// 字体颜色
+.dp-i-block {
+    color: @color !important;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">
+            <a href="javascript:;">
+            </a>
+        </div>
+        <div class="classification">
+            <a href="javascript:;">06陈攀宇</a>
+            <a href="javascript:;" class="dp-i-block">推荐</a>
+        </div>
+        <button class="clickVideo" style="font-size:3vw ;">
+            点我打开介绍视频
+        </button>
+    </nav>
+
+    <!-- 分类搜索 -->
+<article>
+    <div class="fenlei">
+        <div class="classification">
+            <div class="label">
+                <div class="classify-label dp-i-block">全部</div>
+                <div class="classify-label">Python</div>
+                <div class="classify-label">Java</div>
+                <div class="classify-label">JavaScript</div>
+                <div class="classify-label">Go</div>
+                <div class="classify-label">C</div>
+                <div class="classify-label">C++</div>
+                <div class="classify-label">C#</div>
+				<div class="classify-label">VB</div>
+				<div class="classify-label">网络安全</div>
+				<div class="classify-label">系统运维</div>
+				<div class="classify-label">微信小程序</div>
+				<div class="classify-label">Uniapp</div>
+				<div class="classify-label">软件测试</div>
+				<div class="classify-label">原型设计</div>
+				<div class="classify-label">其他</div>
+            </div>
+    
+            <div class="label-row">
+                <div class="screening">
+                    <div class="first-label dp-i-block">全部</div>
+                    <div class="first-label">前端技术</div>
+                    <div class="first-label">后端技术</div>
+                    <div class="first-label">网络安全</div>
+                    <div class="first-label">其他</div>
+                </div>
+            </div>
+            <div class="label-row">
+                <div class="screening">
+                    <div class="first-label dp-i-block">全部</div>
+                    <div class="first-label">视频</div>
+                    <div class="first-label">书籍</div>
+                </div>
+            </div>
+            <div class="label-row">
+                <div class="screening">
+                    <div class="first-label dp-i-block">全部</div>
+                    <div class="first-label">免费</div>
+                    <div class="first-label">付费</div>
+                    <div class="first-label">等就免费</div>
+                </div>
+            </div>
+            <div class="label-row">
+                <div class="screening">
+                    <div class="first-label dp-i-block" style="font-size:3vw ;">人气推荐</div>
+                    <div class="first-label" style="font-size:3vw ;">更新时间</div>
+                    <div class="first-label" style="font-size:3vw ;">上架时间</div>
+    
+                </div>
+                <div class="switch-btn">
+                    <div class="icon"></div>
+                    <span>筛选</span>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div id="videobox" style="display: none;">
+               <p id="pvd">
+				   <iframe frameborder="0" width="100%" src="https://tv.sohu.com/s/sohuplayer/iplay.html?bid=413417891&autoplay=true&disablePlaylist=true" allowFullScreen="true" scrolling="no"></iframe>
+               </p>
+           </div>
+         <script>
+             window.onload=function(){
+                  let oVd=document.getElementById("myvd");
+        			 let oTs=document.getElementById("vdts");
+        			 if(localStorage.ct){
+        				 oTs.style.display="block";
+        				 setTimeout(function(){
+        				 	oVd.currentTime=localStorage.ct;
+        					oTs.style.display="none";
+        					oVd.play();
+        				 
+        			 };
+        			 oVd.onpause=function(){
+        				 localStorage.ct=oVd.currentTime;
+        			 };
+        			 oTs.onclick=function(){
+        			 	 localStorage.ct=0;
+        			 };
+        			 oVd.onended=function(){
+        				 localStorage.ct=0;
+        			 }
+             }
+         </script>
+    </div>
+<article>
+    <!-- 主体 -->
+    <div class="main">
+        <div class="row">
+            <a href="javascript:;" class="mange">
+                <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+                <div class="manga-title">python</div>
+                <div class="manga-info">python网络爬虫技术</div>
+            </a>
+            <a href="javascript:;" class="mange">
+                <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+                <div class="manga-title">JavaScript</div>
+                <div class="manga-info">你不知道的JavaScript</div>
+            </a>
+            <a href="javascript:;" class="mange">
+                <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+                <div class="manga-title">Java</div>
+                <div class="manga-info">Java核心技术</div>
+            </a>
+        </div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+		<div class="row">
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/1.jpg);"></div>
+		        <div class="manga-title">python</div>
+		        <div class="manga-info">python网络爬虫技术</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/2.jpeg);"></div>
+		        <div class="manga-title">JavaScript</div>
+		        <div class="manga-info">你不知道的JavaScript</div>
+		    </a>
+		    <a href="javascript:;" class="mange">
+		        <div class="manga-cover" style="background-image:url(./images/3.jpg);"></div>
+		        <div class="manga-title">Java</div>
+		        <div class="manga-info">Java核心技术</div>
+		    </a>
+		</div>
+    </div>
+    <div class="dis">
+        <i style="font-size:6vw ;color: white;">X</i>
+        <div class="v-logo"></div>
+        <div class="text">
+            <p style="font-size:3vw ;">让知识没有界限</p>
+            <p style="font-size:3vw ;">快来06陈攀宇图书馆</p>
+        </div>
+        <div class="btn">打开介绍视频</div>
+    </div>
+    <div id="jiazai"
+        style="width:100%;height: 20px;  line-height:20px;font-size:16px;color:#222;text-align:center;display:none;">
+        正在加载</div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+	</script>
+</body>
+
+</html>
